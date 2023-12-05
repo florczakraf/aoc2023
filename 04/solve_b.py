@@ -1,5 +1,6 @@
 import re
 import sys
+from collections import defaultdict
 from queue import Queue
 
 
@@ -8,7 +9,7 @@ def load_stdin():
 
 input = load_stdin()
 
-cards = {}
+cards = defaultdict(lambda: 0)
 
 to_process = Queue()
 
@@ -21,18 +22,10 @@ for line in input:
     card = {int(x) for x in numbers[pipe+1:]}
 
     common = len(winning.intersection(card))
-    cards[card_id] = common
-
-    to_process.put(card_id)
-
-
-sum = 0
-while not to_process.empty():
-    sum += 1
-    card_id = to_process.get()
-    common = cards[card_id]
+    cards[card_id] += 1
     if common:
         for i in range(card_id + 1, card_id + common + 1):
-            to_process.put(i)
+            cards[i] += cards[card_id]
 
-print(sum)
+
+print(sum(cards.values()))
