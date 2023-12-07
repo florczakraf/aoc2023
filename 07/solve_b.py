@@ -1,7 +1,7 @@
 import re
 import sys
 from collections import Counter
-from functools import cmp_to_key
+from functools import cmp_to_key, cache
 
 
 def load_stdin():
@@ -16,6 +16,7 @@ for line in input:
     hands[cards] = int(bet)
 
 
+@cache
 def get_hand_rank(hand):
     counter = Counter(hand)
 
