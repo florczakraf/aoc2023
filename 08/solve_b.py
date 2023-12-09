@@ -1,8 +1,7 @@
+import math
 import re
 import sys
 from itertools import cycle
-
-import numpy as np
 
 
 def load_stdin():
@@ -17,8 +16,6 @@ stops = []
 
 for line in input[2:]:
     node, l, r = (re.findall(r"[A-Z0-9]{3}", line))
-
-    print(node, l, r)
 
     if node.endswith("A"):
         starts.append(node)
@@ -40,4 +37,8 @@ for start in starts:
 
     ns.append(n)
 
-print(np.lcm.reduce(ns))
+answer = ns[0]
+for n in ns[1:]:
+    answer = answer * n // math.gcd(answer, n)
+
+print(answer)
