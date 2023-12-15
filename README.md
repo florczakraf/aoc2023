@@ -31,7 +31,7 @@ It happens that one of my computers runs on roughly 10 years old Intel i5-4460 s
 ./13/solve_a.py: 18 17 17 17 17 17 16 16 16 16 ms | avg: 16 ms
 ./13/solve_b.py: 32 33 33 32 34 33 32 33 32 33 ms | avg: 32 ms
 ./14/solve_a.py: 121 119 120 118 123 122 122 122 133 123 ms | avg: 122 ms
-./14/solve_b.py: 45224 44486 44622 45312 45397 44398 44496 46201 44338 45745 ms | avg: 45021 ms
+./14/solve_b.py: 1681 1692 1696 1750 1682 1675 1680 1683 1728 1679 ms | avg: 1694 ms
 ./15/solve_a.py: 35 31 30 30 30 30 31 30 31 30 ms | avg: 30 ms
 ./15/solve_b.py: 31 32 31 32 31 32 31 32 31 31 ms | avg: 31 ms
 ./_meta/python_startup.py: 12 12 12 12 11 12 13 14 13 12 ms | avg: 12 ms
