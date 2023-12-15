@@ -17,12 +17,34 @@ for line in input:
 
 
 def simulate(map):
-    for _ in range(len(map) - 1):
-        for y in range(1, len(map)):
-            for x in range(len(map[0])):
-                if map[y][x] == "O" and map[y - 1][x] == ".":
-                    map[y][x] = "."
-                    map[y - 1][x] = "O"
+    for x in range(len(map[0])):
+        start = None
+        count = 0
+        for y in range(len(map)):
+            c = map[y][x]
+            if c == "#" and start is not None:
+                for y_ in range(start, start + count):
+                    map[y_][x] = "O"
+                for y_ in range(start + count, y):
+                    map[y_][x] = "."
+                start = None
+                count = 0
+            elif c == "#":
+                start = None
+                count = 0
+            elif c == "O":
+                count += 1
+                if start is None:
+                    start = y
+            elif c == "." and start is None:
+                start = y
+
+        if start is not None:
+            for y_ in range(start, start+count):
+                map[y_][x] = "O"
+            for y_ in range(start+count, len(map)):
+                map[y_][x] = "."
+
 
 def rotate(map):
     return [list(x) for x in zip(*map[::-1])]
