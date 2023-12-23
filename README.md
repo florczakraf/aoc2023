@@ -48,5 +48,7 @@ It happens that one of my computers runs on roughly 10 years old Intel i5-4690k 
 ./21/solve_b.py: 20238 20570 20020 19616 19930 19667 19441 20601 19911 20072 ms | avg: 20006 ms
 ./22/solve_a.py: 3300 3358 3256 3293 3350 3337 3311 3364 3327 3325 ms | avg: 3322 ms
 ./22/solve_b.py: 3347 3398 3383 3365 3321 3385 3296 3335 3304 3331 ms | avg: 3346 ms
+./23/solve_a.py: 234 234 236 235 234 232 234 234 234 233 ms | avg: 234 ms
+./23/solve_b.py: 21246 21062 20959 21014 21075 21160 21015 21029 21137 20999 ms | avg: 21069 ms
 ./_meta/python_startup.py: 8 8 8 8 8 8 8 8 8 8 ms | avg: 8 ms
 ```
