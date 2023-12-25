@@ -52,5 +52,6 @@ It happens that one of my computers runs on roughly 10 years old Intel i5-4690k 
 ./23/solve_b.py: 21246 21062 20959 21014 21075 21160 21015 21029 21137 20999 ms | avg: 21069 ms
 ./24/solve_a.py: 148 151 150 148 149 149 149 148 149 145 ms | avg: 148 ms
 ./24/solve_b.py: 3146 3137 3138 3148 3133 3152 3137 3148 3139 3138 ms | avg: 3141 ms
+./25/solve_a.py: 10705 11029 11004 10895 11123 11191 10718 11000 10859 10780 ms | avg: 10930 ms
 ./_meta/python_startup.py: 8 8 8 8 8 8 8 8 8 8 ms | avg: 8 ms
 ```
